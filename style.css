@@ -141,6 +141,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
+    background-image: url(/assets/img/bg-nuvens.png);
+    background-size: cover;
 }
 .sessao2-titulo{
     
