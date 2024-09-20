@@ -520,6 +520,7 @@ button:hover {
     text-align: center;
     font-size: 1.5vw;
     color: var(--branco);
+    padding-bottom:8%;
 }
 
   /* AREA VALOR */
@@ -529,6 +530,10 @@ button:hover {
     justify-content: center;
     align-items: center;
     width: 100%; 
+    border: 2px solid rgba(255, 255, 255, 0.356);
+    padding: 3% .1%;
+    border-radius: 10px;
+    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.137));
 }
 
 .valor-acima p{
