@@ -1,9 +1,9 @@
-let currentIndex = 3; // Começa na quarta imagem
+let currentIndex = 3; // Começa na quarta imagem para desktop
 const items = document.querySelectorAll('.carousel-item');
 const totalItems = items.length;
+const dotsContainer = document.querySelector('.dots');
 
 // Cria as bolinhas dinamicamente
-const dotsContainer = document.querySelector('.dots');
 for (let i = 0; i < totalItems; i++) {
     const dot = document.createElement('span');
     dot.classList.add('dot');
@@ -37,8 +37,17 @@ function updateHighlight() {
 
 // Move o carrossel
 function moveCarousel() {
-    const offset = -currentIndex * (100 / (totalItems - 1));
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+    if (window.innerWidth <= 768) {
+        // Mobile: mostra apenas a imagem atual
+        items.forEach((item, index) => {
+            item.style.display = (index === currentIndex) ? 'block' : 'none';
+        });
+    } else {
+        // Desktop: usa a transformação
+        const offset = -currentIndex * (100 / (totalItems - 1));
+        document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+        items.forEach(item => item.style.display = 'flex'); // Garante que as imagens sejam exibidas
+    }
 }
 
 // Função para mudar o destaque
@@ -72,3 +81,6 @@ setInterval(() => {
     updateHighlight();
     moveCarousel();
 }, 3000);
+
+// Adiciona um listener para verificar a largura da tela ao redimensionar
+window.addEventListener('resize', moveCarousel);
