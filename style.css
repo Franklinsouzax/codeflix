@@ -172,7 +172,7 @@
     flex-direction: column;
     border:7px dashed #00FFA3 ;
     background-color: var(--amarelo-claro);
-    min-height: 49vh;
+    min-height: 60vh;
     min-width: 18vw;
     max-width: 18vw;
     margin: 3%;
@@ -979,7 +979,7 @@ right: 0;
 }
 .quadros-sessao2{
    
-    min-height: 80vw;
+    min-height: 120vw;
     max-height: 80vw;
     max-width: 80vw;
     min-width: 80vw;
@@ -1169,6 +1169,7 @@ font-weight: 600;
 }
 .container-garantia{
     flex-direction: column;
+    background-position: center;
 }
 .animacao-container{
     border-radius:50px ;
