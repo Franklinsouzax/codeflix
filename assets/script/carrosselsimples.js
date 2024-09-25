@@ -4,10 +4,13 @@ showSlides();
 function showSlides() {
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelector('.carousel-dots');
+    
+    // Mostrar slides
     slides.forEach((slide, index) => {
         slide.style.display = index === slideIndex ? 'flex' : 'none';
     });
 
+    // Atualizar os pontos
     dots.innerHTML = '';
     for (let i = 0; i < slides.length; i++) {
         const dot = document.createElement('span');
@@ -15,12 +18,18 @@ function showSlides() {
         dot.onclick = () => currentSlide(i);
         dots.appendChild(dot);
     }
-    dots.children[slideIndex].classList.add('active-simple');
 
+    // Marcar o ponto ativo
+    if (dots.children[slideIndex]) {
+        dots.children[slideIndex].classList.add('active-simple');
+    }
+
+    // Avançar para o próximo slide
     slideIndex++;
     if (slideIndex >= slides.length) slideIndex = 0;
 
-    // setTimeout(showSlides, 3000); // Muda a cada 3 segundos
+    // Mudar a cada 3 segundos
+    setTimeout(showSlides, 3000);
 }
 
 function changeSlide(n) {
