@@ -20,7 +20,7 @@ html{
     scroll-behavior: smooth;
 }
 /**BARRA DE NAVEGAÇÃO**/
-
+/* 
 
 .menu-container {
     position: fixed;
@@ -41,8 +41,7 @@ html{
 
     width: 4vw;
     height: 0.5vh;
-    background-color: var(--amarelo-claro); /* Altere para a cor desejada */
-    margin: 3px 0;
+    background-color: var(--amarelo-claro); 
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -55,16 +54,15 @@ html{
     border-radius: 20px;
     padding: 2vh;
     width: 20vw;
-    display: none; /* Inicia como não visível */
-    opacity: 0; /* Opacidade inicial */
-    transition: opacity 0.5s ease; /* Transição suave da opacidade */
+    display: none;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.377);
 }
 
-/* Adiciona uma classe para exibir o menu com efeito de fade-in */
 .balloon.show {
-    display: block; /* Torna visível */
-    opacity: 1; /* Opacidade final */
+    display: block; 
+    opacity: 1; 
 }
 .menu-items {
     list-style: none;
@@ -93,27 +91,27 @@ html{
 
 .bubble {
     position: absolute;
-    bottom: -10px; /* Posição da bola em relação ao menu burger */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta a centralização */
-    width: 4vw; /* Largura da bola */
-    height: 4vw; /* Altura da bola */
-    background-color: var(--amarelo); /* Cor da bola */
-    border-radius: 50%; /* Torna a bola redonda */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra da bola */
-    animation: bounce 0.5s infinite; /* Animação de quique */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 4vw; 
+    height: 4vw; 
+    background-color: var(--amarelo); 
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    animation: bounce 0.5s infinite; 
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--roxo);
     font-family: 'Arial', sans-serif;
     text-align: center;
-    font-size: 1.5vw; /* Tamanho do texto */
+    font-size: 1.5vw; 
     padding: 0.5vh;
 }
 
 .bubble-text {
-    transform: scale(0.8); /* Tamanho irregular do texto */
+    transform: scale(0.8); 
 }
 
 @keyframes bounce {
@@ -121,7 +119,7 @@ html{
         transform: translateX(-50%) translateY(0);
     }
     50% {
-        transform: translateX(-50%) translateY(-5px); /* Altura do quique */
+        transform: translateX(-50%) translateY(-5px); 
     }
 }
 
@@ -131,57 +129,57 @@ html{
     }
 
     .bubble {
-        width: 10vw; /* Ajusta a bola para telas menores */
-        height: 10vw; /* Ajusta a altura da bola */
-        font-size: 2vw; /* Ajusta o tamanho do texto para telas menores */
+        width: 10vw; 
+        height: 10vw; 
+        font-size: 2vw; 
     }
-}
+} */
 
 /**BOTÃO WHATSAPP**/
 
 .whatsapp-button {
     position: fixed;
-    bottom: 8vh; /* Distância do fundo */
-    left: 4vw; /* Distância da esquerda */
-    width: 10vh; /* Largura da bolinha */
-    height: 10vh; /* Altura da bolinha */
-    background-color: #25D366; /* Tom oficial do WhatsApp */
+    bottom: 8vh; 
+    left: 4vw; 
+    width: 10vh; 
+    height: 10vh;
+    background-color: #25D366; 
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra mais forte */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1001; /* Garantir que fique na frente */
+    z-index: 1001;
 }
 
 .whatsapp-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5); /* Sombra mais forte no hover */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5); 
 }
 
 .whatsapp-button i {
-    font-size: 4vh; /* Tamanho do ícone em vh */
+    font-size: 4vh; 
 }
 
 .whatsapp-popup {
-    display: none; /* Inicialmente escondido */
+    display: none; 
     position: fixed;
-    bottom: 22vh; /* Aumentado para 16vh, movendo mais para cima */
-    left: 1vw; /* Distância da esquerda */
+    bottom: 22vh;
+    left: 1vw;
     animation: fadeIn 0.3s ease;
-    z-index: 1001; /* Garantir que fique na frente */
+    z-index: 1001; 
 }
 
 .whatsapp-bubble {
-    background-color: #E5F8E6; /* Cor semelhante ao papel de parede do WhatsApp */
+    background-color: #E5F8E6; 
     border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
-    padding: 2vh 2vw; /* Padding em vh e vw */
-    width: 40vw; /* Largura da caixinha reduzida */
-    max-width: 240px; /* Largura máxima da caixinha */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    padding: 2vh 2vw; 
+    width: 40vw; 
+    max-width: 240px; 
     position: relative;
     font-weight: 500;
 }
@@ -190,12 +188,12 @@ html{
    
     content: '';
     position: absolute;
-    top: 100%; /* Posição da ponta do balão */
-    left: 20%; /* Alinha a ponta do balão */
-    margin-left: -10px; /* Ajusta a posição da ponta */
-    border-width: 2vw; /* Ajuste proporcional */
+    top: 100%;
+    left: 20%;
+    margin-left: -10px; 
+    border-width: 2vw; 
     border-style: solid;
-    border-color: #E5F8E6 transparent transparent transparent; /* Cores do balão */
+    border-color: #E5F8E6 transparent transparent transparent;
 }
 
 @keyframes fadeIn {
@@ -798,7 +796,7 @@ button:hover {
         justify-content: center; 
         position: relative;
         background-size: cover;
-        background-image: url(/assets/img/bg-roxo-tinta.png);
+        background: linear-gradient(to bottom, rgba(200, 162, 255, 0.5), rgba(255, 255, 255, 0));
        
     }
     
