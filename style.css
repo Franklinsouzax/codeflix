@@ -136,7 +136,18 @@ html{
 } */
 
 /**BOTÃO WHATSAPP**/
-
+.footer{
+    padding: 5% ;
+    text-align: center;
+    color: var(--branco);
+}
+.footer a{
+    color: var(--branco);
+    text-decoration: none;
+}
+.footer a:hover{
+    color: var(--roxo);
+}
 .whatsapp-button {
     position: fixed;
     bottom: 8vh; 
@@ -335,7 +346,9 @@ html{
 .btn:hover {
     animation: shake 0.5s infinite;
 }
-
+.btn a{
+    color: var(--roxo-escuro);
+}
 /**SESSÃO DOIS**/
 
 .sessao2{
